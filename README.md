@@ -1,31 +1,26 @@
 # Done
-Winning Auction Contract (Clarity + Clarinet)
+Overview
 
-This project contains a **Clarity smart contract** that powers a **blockchain-based auction** for awarding a contract in a Web3 environment.  
-It is built for **Clarinet** (the Clarity development & testing framework), and ensures that bids are fair, transparent, and trustless.
+This smart contract enables fair RFP bidding on Web3 using a commit–reveal scheme and immutable on-chain winner recording.
 
-🎯 Overview
+🚀 Flow
 
-The **Winning Auction Contract** allows anyone to participate in a transparent, on-chain auction where the **highest bidder wins**.  
+create-rfp → Start new RFP with deadlines
 
-Key characteristics:
-- **Trustless Escrow:** Bidders deposit STX directly into the contract when bidding.  
-- **Clear Leaderboard:** At any time, the current leader can be queried.  
-- **Safe Withdrawals:** Losing bidders can withdraw their STX deposits.  
-- **Finalization:** Once the auction ends, the owner finalizes and receives the winning funds.  
-- **Fair Play:** Rules enforce minimum bids, deadlines, and safe fund management.  
+commit → Vendors submit hash(proposal + salt)
 
- 🛠 Features
+reveal → Vendors reveal proposal + salt
 
-- **Initialization**
-  - Owner sets the auction’s title, minimum bid, start block, and end block.  
-- **Bidding**
-  - Anyone can submit a bid higher than the current leader.  
-  - Bids are locked in STX until the auction ends.  
-- **Withdrawals**
-  - Non-winning bidders can reclaim their deposits at any time after being outbid.  
-- **Finalization**
-  - Once the auction ends, the owner finalizes and receives the winning deposit.  
+finalize → Owner records the winner
 
+✨ Why It Wins
 
+🔒 Transparent & tamper-proof
 
+⏳ Deadlines enforced by block height
+
+🏆 Trustless winner finalization in <35 lines
+
+📜 License
+
+MIT – free for community use.
